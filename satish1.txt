@@ -1,0 +1,36 @@
+sql joins: 
+  
+       joins are used to combine the rows based on a related column between them and the data type should 
+be same.in joins we have
+
+1)inner join: it returns the matching records from the both the tables.
+
+         SELECT column_name(s)
+         FROM table1
+         INNER JOIN table2
+         ON table1.column_name = table2.column_name;
+
+2)left join: it returns all the records from left table and matching records from right table.
+
+        SELECT column_name(s)
+        FROM table1
+        LEFT JOIN table2
+        ON table1.column_name = table2.column_name;
+
+3)right join: it returns all the records from right table and matching records from left table.
+
+        SELECT column_name(s)
+        FROM table1
+        RIGHT JOIN table2
+        ON table1.column_name = table2.column_name;
+4)self join: a self join is regular join,but the table is joined with itself.
+
+       SELECT column_name(s)
+       FROM table1 T1, table1 T2
+       WHERE condition; 
+
+5)cross join: a cross join returns the cartesian product of rows from the rowsets in the join.
+
+         SELECT column_name(s)
+         FROM table1
+         CROSS JOIN table2;
