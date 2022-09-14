@@ -1,0 +1,80 @@
+1)mk dir---->create folder
+2)cd------->to change folder path
+3)touch---->create empty file
+4)nano----->create file(file name)
+5)cat------>to view file content
+6)vi------->create file(file name .csv)
+7)gedit----->
+8)cat-----.(rewriting/redirecting command)
+9)sed------>
+10)grep---->
+11)wc------>
+12)head----->
+13)tail----->
+
+sudo app-get install mysql
+
+cp /sourcename /targetname
+
+mv
+
+rm
+rmd
+
+rmdir-r
+
+du
+hostname---->systemname
+ssh-keygen
+date 
+cal
+
+chmod ugo---->users,group,others
+001
+010
+011
+111
+101
+110
+100
+-----
+1-----exicute
+2-----write
+4------read
+
+------------------
+gcloud auth login
+gcoud init
+gcloud projects list
+gcloud init
+gs://cde_batch_8_new1
+gsutil ls
+gsutil mb gs://cde_batch_8_new1
+gsutil ls
+to rise access --service now
+
+service now ------>project -env;
+gsutil ls gs://cde_batch_8_new1/
+gsutil ls rm_r gs://cde_batch_8_new1/*
+
+
+
+gs util <cmd> gs://buckname/
+
+
+---------------------
+
+ls-lrt
+
+mkdir -p newdir/child_dir
+
+cp textfile .txt
+
+chmod-R 
+
+sh sample.sh>>edit
+
+echo >>print 
+
+echo"hi">>comment
+
