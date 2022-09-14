@@ -1,0 +1,106 @@
+Enter password: *****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.0.30 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| airport            |
+| information_schema |
+| majji              |
+| mysql              |
+| office             |
+| performance_schema |
+| sakila             |
+| satish             |
+| vamsi              |
++--------------------+
+9 rows in set (0.00 sec)
+
+mysql> use office;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_office |
++------------------+
+| person1          |
+| persons          |
+| student          |
+| student1         |
+| tb3              |
+| tb4              |
++------------------+
+6 rows in set (0.00 sec)
+
+mysql> drop table tb3;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> drop table tb4;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create table tb1(key_id int,content varchar(23));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into tb1 values(1,'c1'),(1,'c2'),(1,'c3'),(2,'c4'),(3,'c5');
+Query OK, 5 rows affected (0.00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from tb1;
++--------+---------+
+| key_id | content |
++--------+---------+
+|      1 | c1      |
+|      1 | c2      |
+|      1 | c3      |
+|      2 | c4      |
+|      3 | c5      |
++--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> create table tb4(key_id int,content varchar(45));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> insert into tb4 values(1,c1),(1,c2);
+ERROR 1054 (42S22): Unknown column 'c1' in 'field list'
+mysql> insert into tb4 values(1,c),(1,c);
+ERROR 1054 (42S22): Unknown column 'c' in 'field list'
+mysql> insert into tb4 values(1,'c1'),(1,'c2');
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from tb4;
++--------+---------+
+| key_id | content |
++--------+---------+
+|      1 | c1      |
+|      1 | c2      |
++--------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select count(*) from  tb1;
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from  tb1 left join tb4 on tb1.key_id=tb4.key_id;
++----------+
+| count(*) |
++----------+
+|        8 |
++----------+
+1 row in set (0.00 sec)
+
+mysql>
